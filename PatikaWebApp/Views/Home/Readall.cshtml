@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "readall";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>@Model.ToString()</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Név</td>
+            <td>Hatóanyagtd>
+            <td>vényköteles</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gyogyszer in Model)
+        {
+            <tr>
+                <td><a asp-route-id="@gyogyszer.Id" asp-action="Gyogyszer">@gyogyszer.Id</a></td>
+                <td><a target="_blank" src="Getbyid.cshtml">@gyogyszer.Nev</a></td>
+                <td>@gyogyszer.Hatoanyag<td>
+                <td><input type="checkbox" value="@gyogyszer.Venykoteles"></input><td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

@@ -1,7 +1,9 @@
-﻿@{
+@{
     ViewData["Title"] = "Getbyid";
 }
-
+<h1 class="text-center">@ViewData["Title"]</h1>
+<p class="text-center">@Model.ToString()</p>
 <div class="text-center">
-    <img alt="@Model.Nev" height="200px" src="wwwroot/imgs/@Model.kepnev"></img>
+    <h1>@Model.Nev</h1>
+    <img height="200px" src="wwwroot/imgs/@Model.kepnev"></img>
 </div>
